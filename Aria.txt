@@ -1,1 +1,19 @@
 # Aria's work
+
+KMP Algorithm:
+- uses the degenerating property (pattern having the same sub-patterns appearing more than once in the pattern) of the pattern and improves the worst-case complexity to O(n+m). 
+- uses previous matches to start searching the next set of chars after a mismatch in order to save time
+- Constructs an array lps[] (longest proper prefix) ex) proper prefixes of ‘ABC’ are ‘’ ‘A’ and ‘AB’
+- calculate values in lps[]. To do that, we keep track of the length of the longest prefix suffix value (we use len variable for this purpose) for the previous index
+- use lps[] to find pattern in string by deciding next position easily
+
+ex) Consider txt[] = “AAAAABAAABA“, pat[] = “AAAA“
+If we follow the above LPS building process then lps[] = {0, 1, 2, 3} 
+-> i = 0, j = 0: txt[i] and pat[j] match, do i++, j++
+-> i = 1, j = 1: txt[i] and pat[j] match, do i++, j++
+-> i = 2, j = 2: txt[i] and pat[j] match, do i++, j++
+-> i = 3, j = 3: txt[i] and pat[j] match, do i++, j++
+-> i = 4, j = 4: Since j = M, print pattern found and reset j, j = lps[j-1] = lps[3] = 3
+
+- Time Complexity: O(N+M) where N is the length of the text and M is the length of the pattern to be found.
+- Auxiliary Space: O(M)
