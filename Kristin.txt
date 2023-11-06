@@ -1,1 +1,3 @@
 # Kristin's Work
+
+Brute force algorthim solves a problem through exhuastion. Time complexity is porportional to the input size. Simple and consistent but very slow. Iterating through every possibility available to solve the problem. 
