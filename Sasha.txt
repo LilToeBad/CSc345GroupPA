@@ -1,1 +1,6 @@
 # Sasha's work 
+
+
+Boyer Moore pattern searching algorithm.
+
+The algorithm is a combination of Bad Character Heuristic and Good Suffix Heuristic approaches. 
