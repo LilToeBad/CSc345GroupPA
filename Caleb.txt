@@ -1,7 +1,7 @@
 # Caleb's Research
 
   I am researching the Rabin-Karp algorithm of the Pattern Searching Method. The Rabin-Karp algorithm is given
-a text sequence as a character array and a pattern sequence as a character array. The text sequence is of size n
+a text sequence as a String (character array) and a pattern sequence as a String (character array). The text sequence is of size n
 and the pattern sequence is of size m. You may assume that n > m. The Rabin-Karp method is similar to the Naive
 algorithm (see...), but the Rabin-Karp method uses a hash function to compare the total hash code of the pattern
 sequence to the total hash code of the current substring of the text sequence. Each substring will be of size m. 
