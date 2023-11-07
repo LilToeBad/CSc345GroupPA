@@ -1,1 +1,38 @@
-# Caleb's work
+# Caleb's Research
+
+  I am researching the Rabin-Karp algorithm of the Pattern Searching Method. The Rabin-Karp algorithm is given
+a text sequence as a character array and a pattern sequence as a character array. The text sequence is of size n
+and the pattern sequence is of size m. You may assume that n > m. The Rabin-Karp method is similar to the Naive
+algorithm (see...), but the Rabin-Karp method uses a hash function to compare the total hash code of the pattern
+sequence to the total hash code of the current substring of the text sequence. Each substring will be of size m. 
+
+  Handling the hash value is as following, first find the hash value by using a rolling hash function. The reason
+the Rabin-Karp method uses a rolling hash function is because it effectively finds the next hash value of the the next
+substring by removing the beginning character of the first substring and adding the next character of the last index
+of the previous substring to form a new hash value for the next substring. This works better and more efficiently then
+determining a new hash value for the next substring by starting from scratch. We find the hash value by choosing a base
+and a modulus, we determine the modulus as a good prime number to ensure good distribution of the hash values. We
+determine the base, which is often the size of the total character set, (which is 256 for ASCII characters). 
+Nextly, initalize the hash value and calculate the entire hash value of the pattern by adding the hash value of the character
+at the current position to hash. 
+
+  Once the hash value is determined, determine the hash value of the pattern and the text sequence, if the hash values of
+the pattern sequence and the text sequence are the same then do a character by character search to determine if the characters
+are the same. The reason we continue to do a character by character search is because we want to avoid hash collisions. If the 
+pattern sequence and the current substring of the text sequence has the same hash code and have different characters or a different
+sequence then the patterns are not the same. Once the substring and the pattern are fully compared then we will use the rolling
+hash function to determine the next hash value of the next substring. We'll move the window by removing the first character of
+the string and add the next index which is the next character to the substring to form a new subtring to compare. 
+
+  The Rabin-Karp method has an average and best-case runtime of O(n+m), where n is the size of the character array, and m is the
+size of the pattern array. It has a worst case runtime of O(nm), where n is the size of the character array, and m is the
+size of the pattern array. The worst case occurs when all the characters of the pattern and text sequence are the same hash values
+for all the substrings of the text sequence, but none of the patterns match. A case would be every substring of the same size as the
+pattern sequence have the same hash value but are sorted in a different order (i.e., 'abc' != 'cba' and also called a spurious hit). 
+To avoid this worst case, the better developed rolling a hash function develops a better runtime for the code.The Rabin-Karp method
+uses O(1) auxiliary space, all the work is done on the text sequence.
+
+Plan of implementation:
+-> Develop a rolling hash function to determine the hash value
+-> Develop a search method that prints the starting index of where the exact pattern is found (if found).
+-? Develop test cases
