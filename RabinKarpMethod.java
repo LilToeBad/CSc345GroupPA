@@ -10,25 +10,27 @@ public class RabinKarpMethod {
 	// BASE is the number of characters in the ASCII table.
 	public final static int BASE = 256;
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		search("AB", "ABBABABBABABAAAABABABAAAABABAABBABAB", 101);
-
-	}
-	
-	
-	
 	/* The search method performs a pattern matching search on the text string.
 	 * In the method, the hash value for the entire sequence is calculated
 	 * and the hash code for the pattern sequence and text sequence is calculated.
 	 * If the hash codes for the pattern and text match, do a character by character
-	 * search to see if you have a complete match. 
+	 * search to see if you have a complete match.  This work is done in place
+	 * and it does a linear search, the runtime is O(n+m) done in O(1) space.
 	 */
 	public static void search(String pattern, String text, int prime){
 		
+		int totalFinds = 0;														// Counts the total number of sequences found in the pattern.
+		
+		System.out.println("The pattern sequence of this test is: " + pattern 
+				+ ". And the text sequence is: " + text + ".");
+		
+		if (pattern == null || text == null) {return;}							// If any input is empty, just return
+		
 		int pLen = pattern.length();											// Save the value of the pattern length into pLen
 		int tLen = text.length();												// Save the value of the text length in tLen
+		
+		if (pLen > tLen) {return;}												// If the size of the pattern is bigger than the text size then return
+		
 		long pHash = 0;															// Initialize pattern hash value
 		long tHash = 0;															// Initialize text hash value
 		long hash = 1;															// Initialize the hash value for the rolling hash
@@ -61,8 +63,10 @@ public class RabinKarpMethod {
 				 * the index, j, will be the same value of the size of the 
 				 * pattern. I.e pattern[0, pLen-1] == text[i, i+pLen-1]
 				 */
-				if (j == pLen)																									
+				if (j == pLen){																						
 					System.out.println("Pattern Found at index " + i);			// Print the starting index where the match was found
+					totalFinds++;
+				}
 			}
 			
 			/* The condition i < tLen - pLen runs when you need
@@ -79,6 +83,7 @@ public class RabinKarpMethod {
 					tHash += prime;
 			}
 		}
+		System.out.print("\nTotal number of patterns found were " + totalFinds + ".\n");
 	}
 	
 	
