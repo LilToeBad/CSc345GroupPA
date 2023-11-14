@@ -19,31 +19,31 @@ public class RabinKarpMethod {
 	 */
 	public static void search(String pattern, String text, int prime){
 		
-		int totalFinds = 0;														// Counts the total number of sequences found in the pattern.
+		int totalFinds = 0;									// Counts the total number of sequences found in the pattern.
 		
 		System.out.println("The pattern sequence of this test is: " + pattern 
 				+ ". And the text sequence is: " + text + ".");
 		
-		if (pattern == null || text == null) {return;}							// If any input is empty, just return
+		if (pattern == null || text == null) {return;}						// If any input is empty, just return
 		
-		int pLen = pattern.length();											// Save the value of the pattern length into pLen
-		int tLen = text.length();												// Save the value of the text length in tLen
+		int pLen = pattern.length();								// Save the value of the pattern length into pLen
+		int tLen = text.length();								// Save the value of the text length in tLen
 		
-		if (pLen > tLen) {return;}												// If the size of the pattern is bigger than the text size then return
+		if (pLen > tLen) {return;}								// If the size of the pattern is bigger than the text size then return
 		
-		long pHash = 0;															// Initialize pattern hash value
-		long tHash = 0;															// Initialize text hash value
-		long hash = 1;															// Initialize the hash value for the rolling hash
+		long pHash = 0;										// Initialize pattern hash value
+		long tHash = 0;										// Initialize text hash value
+		long hash = 1;										// Initialize the hash value for the rolling hash
 		int i,j;
 		
-		hash = rollingHash(hash, pLen, prime);									// Update hash value
+		hash = rollingHash(hash, pLen, prime);							// Update hash value
 		
 		for (int index = 0; index < pLen; index++){
 			pHash = (BASE * pHash + pattern.charAt(index)) % prime;				// Calculate the hash value of the pattern sequence
 			tHash = (BASE * tHash + text.charAt(index)) % prime;				// Calculate the hash value of the text sequence 
 		}
 		
-		for (i = 0; i < tLen - pLen; i++){										// Iterate over the text sequence
+		for (i = 0; i < tLen - pLen; i++){							// Iterate over the text sequence
 			
 			/* The condition pHash == tHash checks if the hash codes are the same.
 			 * If they are the same they go through each character one by one
@@ -52,8 +52,8 @@ public class RabinKarpMethod {
 			
 			if (pHash == tHash){								
 				
-				for (j = 0; j < pLen; j++){										// Start iteration of the condition was true
-					if (text.charAt(i+j) != pattern.charAt(j)) 					// If the characters don't match, break the character search
+				for (j = 0; j < pLen; j++){						// Start iteration of the condition was true
+					if (text.charAt(i+j) != pattern.charAt(j)) 			// If the characters don't match, break the character search
 						break;
 				}
 				
@@ -64,7 +64,7 @@ public class RabinKarpMethod {
 				 * pattern. I.e pattern[0, pLen-1] == text[i, i+pLen-1]
 				 */
 				if (j == pLen){																						
-					System.out.println("Pattern Found at index " + i);			// Print the starting index where the match was found
+					System.out.println("Pattern Found at index " + i);		// Print the starting index where the match was found
 					totalFinds++;
 				}
 			}
