@@ -33,7 +33,7 @@ public class KMP {
 			
 			// pattern fully found
 			if (j == M) {
-				System.out.println("Pattern found at index" + (i - j) + "!!");
+				System.out.println("Pattern found at index: " + (i - j) + ".");
 				j = lps[j - 1];
 			}
 			
