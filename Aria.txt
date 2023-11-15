@@ -32,7 +32,8 @@ output: Pattern found at index 9.
         Pattern found at index 170.
 
 
-text = "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain." - Frank Herbert's "Dune"
+text = "I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the
+inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain." - Frank Herbert's "Dune"
 pattern = "fear"
 output: Pattern found at index 11.
         Pattern found at index 17.
@@ -41,7 +42,9 @@ output: Pattern found at index 11.
         Pattern found at index 248.
 
 
-text = "The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far. The sciences, each straining in its own direction, have hitherto harmed us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality, and of our frightful position therein, that we shall either go mad from the revelation or flee from the deadly light into the peace and safety of a new dark age." - H.P Lovecraft's "The Call of Cthulhu"
+text = "The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant
+that we should voyage far. The sciences, each straining in its own direction, have hitherto harmed us little; but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality, and
+of our frightful position therein, that we shall either go mad from the revelation or flee from the deadly light into the peace and safety of a new dark age." - H.P Lovecraft's "The Call of Cthulhu"
 pattern = "w"
 output: Pattern found at index 31.
         Pattern found at index 113.
@@ -54,7 +57,10 @@ output: Pattern found at index 31.
         Pattern found at index 581. 
 
 
-text = "Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer's wife. Their house was small, for the lumber to build it had to be carried by wagon many miles. There were four walls, a floor and a roof, which made one room; and this room contained a rusty looking cooking stove, a cupboard for the dishes, a table, three or four chairs, and the beds. Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar—except a small hole, dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path. It was reached by a trap-door in the middle of the floor, from which a ladder led down into the small, dark hole." - L. Frank Baum's "The Wonderful Wizard of Oz" 
+text = "Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer's wife. Their house was small, for the lumber to build it had to be carried by wagon
+many miles. There were four walls, a floor and a roof, which made one room; and this room contained a rusty looking cooking stove, a cupboard for the dishes, a table, three or four chairs, and the beds. Uncle Henry and
+Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar—except a small hole, dug in the ground, called a cyclone cellar, where the family could go in case
+one of those great whirlwinds arose, mighty enough to crush any building in its path. It was reached by a trap-door in the middle of the floor, from which a ladder led down into the small, dark hole." - L. Frank Baum's "The Wonderful Wizard of Oz" 
 pattern = "the"
 output: Pattern found at index 17.
         Pattern found at index 30.
