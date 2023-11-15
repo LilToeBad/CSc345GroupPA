@@ -7,8 +7,8 @@ public class KMP {
   public static void main(String[] args) {
 		String text = "";
 		String pattern = "";
+	  	text = text.toLowerCase();
 		new KMP().KMPSearch(pattern, text);
-
 	}
 	
 	public void KMPSearch(String pattern, String text) {
@@ -33,7 +33,7 @@ public class KMP {
 			
 			// pattern fully found
 			if (j == M) {
-				System.out.println("Pattern found at index: " + (i - j) + ".");
+				System.out.println("Pattern found at index " + (i - j) + ".");
 				j = lps[j - 1];
 			}
 			
