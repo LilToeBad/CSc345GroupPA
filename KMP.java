@@ -3,8 +3,7 @@
 *  Purpose: This file implementa a KMP pattern searching algorithm
 */
 public class KMP {
-
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		String[] patterns = {"abc", "like", "fear", "w", "the"};
 		
 		String[] texts = {"abcdabcdabcabdbadb", 
@@ -83,24 +82,24 @@ public class KMP {
 	
 	public void LPSarray(String pattern, int m, int lps[]) {
 		// length of previous longest prefix suffix
-		int length = 0;
 		int i = 1;
+		int j = 0;
 		lps[0] = 0;
 		
 		while (i < m) {
-			if (pattern.charAt(i) == pattern.charAt(length)) {
-				length++;
-				lps[i] = length;
+			if (pattern.charAt(i) == pattern.charAt(j)) {
+				j++;
+				lps[i] = j;
 				i++;
 			}
 			
 			else {
-				if (length != 0) {
-					length = lps[length - 1];
+				if (j != 0) {
+					j = lps[j - 1];
 				}
 				
 				else {
-					lps[i] = length;
+					lps[i] = j;
 					i++;
 				}
 			}
