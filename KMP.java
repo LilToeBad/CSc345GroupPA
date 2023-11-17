@@ -39,7 +39,7 @@ public static void main(String[] args) {
 			System.out.println("All done!");
 			System.out.println("----------------------------------");
 		}
-
+		System.out.println("All patterns found!");
 	}
 	
 	public void KMPSearch(String pattern, String text) {
