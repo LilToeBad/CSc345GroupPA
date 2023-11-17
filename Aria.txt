@@ -1,13 +1,15 @@
 # Aria's work
 
 KMP Algorithm:
-- uses the degenerating property (pattern having the same sub-patterns appearing more than once in the pattern) of the pattern and improves the worst-case complexity to O(n+m). 
-- uses previous matches to start searching the next set of chars after a mismatch in order to save time
-- Constructs an array lps[] (longest proper prefix) ex) proper prefixes of ‘ABC’ are ‘’ ‘A’ and ‘AB’
-- calculate values in lps[]. To do that, we keep track of the length of the longest prefix suffix value (we use len variable for this purpose) for the previous index
-- use lps[] to find pattern in string by deciding next position easily
-- Time Complexity: O(N+M) where N is the length of the text and M is the length of the pattern to be found.
-- Auxiliary Space: O(M)
+- Searches for a pattern in a test using a table of prefixes
+- Algorithm that uses the degenerating property, which makes it better for patterns with reappearing sub-patterns
+- Uses previous matches to start searching the next set of characters in the text after a mismatch in order to save time
+- Most important part of the KMP algorithm is the LPS (longest proper prefix that is also a suffix) table, sometimes called the Prefix table
+- It is a list the length of the pattern that indicates the indices where repeat characters occur in the pattern
+- The table is used when traversing the text in order to skip places where we know that characters will match
+- Time complexity is O(n + m) where n is the length of the text and m is the length of the pattern due to the traversal of the text and simultaneous traversal of the LPS table
+- Space usage is O(m) because an array the size of the pattern is created for the LPS table
+
 
 testcases:
 text = "abcdabcdabcabdbadb"
