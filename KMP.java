@@ -3,10 +3,10 @@
 *  Purpose: This file implementa a KMP pattern searching algorithm
 */
 public class KMP {
-public static void main(String[] args) {
-		String[] patterns = {"abc", "like", "fear", "w", "the"};
+	public static void main(String[] args) {
+		String[] patterns = {"abab", "like", "will", "ll", "tt"};
 		
-		String[] texts = {"abcdabcdabcabdbadb", 
+		String[] texts = {"abcdaabababcdabcabdbadbababa", 
 				"I do not like them in a house. \n"
 				+ "I do not like them with a mouse. \n"
 				+ "I do not like them here or there. \n"
@@ -39,7 +39,7 @@ public static void main(String[] args) {
 			System.out.println("All done!");
 			System.out.println("----------------------------------");
 		}
-		System.out.println("All patterns found!");
+
 	}
 	
 	public void KMPSearch(String pattern, String text) {
@@ -62,19 +62,21 @@ public static void main(String[] args) {
 				i++;
 			}
 			
-			// pattern fully found
+			// pattern fully found (reached the end of the pattern)
 			if (j == m) {
 				System.out.println("Pattern found at index " + (i - j) + ".");
 				j = lps[j - 1];
 			}
 			
 			// mismatch after j matches
-			else if (i < n && pattern.charAt(j) != text.charAt(i)) {
-				if (j != 0) {
-					j = lps[j - 1];
-				}
-				else {
-					i = i + 1;
+			else if (i < n) {
+				if (pattern.charAt(j) != text.charAt(i)) {
+					if (j == 0) {
+						i = i + 1;
+					}
+					else {
+						j = lps[j - 1];
+					}
 				}
 			}
 		}
@@ -86,21 +88,24 @@ public static void main(String[] args) {
 		int j = 0;
 		lps[0] = 0;
 		
+		// while i < length of pattern
 		while (i < m) {
+			// found repeat in pattern
 			if (pattern.charAt(i) == pattern.charAt(j)) {
 				j++;
 				lps[i] = j;
 				i++;
 			}
 			
+			//no repeat
 			else {
-				if (j != 0) {
-					j = lps[j - 1];
+				if (j == 0) {
+					lps[i] = j;
+					i++;
 				}
 				
 				else {
-					lps[i] = j;
-					i++;
+					j = lps[j - 1];
 				}
 			}
 		}
