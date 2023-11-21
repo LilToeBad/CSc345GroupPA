@@ -1,11 +1,15 @@
-package teamProject;
+
+//Rename the import PatternSearch.boyerMethod; match your local package.
+//If you're in a package import [Package Name].PatternSearch.KMP;
+//If you're not in a package, just import PatternSearch.boyerMethod;.
+import PatternSearch.boyerMethod;
 
 //Sasha Joe
 //CSC 345, Fall '23
 //testCasesBoyer.java for boyerMethod.java for team project
 
 public class testCasesBoyer {
-	public static void main(String[] args) {
+	public static void main() {
 		
 		char[] test1Text = "ABAABCD".toCharArray();
 		char[] test1Pattern = 	"ABC".toCharArray();
