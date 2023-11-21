@@ -34,7 +34,7 @@ Space Used: O(1).
 
 Implementation of code and tests:
 
-The BruteForce class implements a search method that take
+The BruteForce class implements a search method that takes
 the string as an input and the string pattern as the other input. If the
 pattern is found in the string, the method will return "Pattern found",
 if the pattern is not found in the string, the method will return "Pattern not found".
