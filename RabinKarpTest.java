@@ -1,13 +1,16 @@
 import java.util.Random;
 import java.util.random.*;
+
+import GroupPA.PatternSearch.RabinKarpMethod;
+
 import java.math.*;
 import java.util.Scanner;
 
 public class RabinKarpTest {
 	
-	public static int testCount = 1;							                        // Count the total number of tests
+	public static int testCount = 1;							// Count the total number of tests
 	
-	public static void main(String[] args){
+	public static void main(){
 		
 		System.out.println("------------------------");
 		// Call Test 1
@@ -62,14 +65,14 @@ public class RabinKarpTest {
 	 * is found.
 	 */
 	public static int findPrime(int number) {
-        if (isPrime(number)) {									                      // Checks if current number is prime
-            return number;										                        // Return that number
+        if (isPrime(number)) {									// Checks if current number is prime
+            return number;										// Return that number
         } else {
-            int nextNumber = number + 1;					                  	// Go to the next number
-            while (!isPrime(nextNumber)) {						                // Loop the continuing numbers until the next prime is found
+            int nextNumber = number + 1;						// Go to the next number
+            while (!isPrime(nextNumber)) {						// Loop the continuing numbers until the next prime is found
                 nextNumber++;
             }
-            return nextNumber;									                      // Return the newly found prime number
+            return nextNumber;									// Return the newly found prime number
         }
     }
 
@@ -80,15 +83,15 @@ public class RabinKarpTest {
 	 * false.
 	 */
     private static boolean isPrime(int number) {
-        if (number <= 1) {										                        // Handles if number == 0 || 1
+        if (number <= 1) {										// Handles if number == 0 || 1
             return false;
         }
         for (int i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) {								                    // Checks if the current i divides the N-1 evenly, if so it's composite so return false
+            if (number % i == 0) {								// Checks if the current i divides the N-1 evenly, if so it's composite so return false
                 return false;
             }
         }
-        return true;											                            // Otherwise if prime, return true.
+        return true;											// Otherwise if prime, return true.
     }
     
     
@@ -98,9 +101,9 @@ public class RabinKarpTest {
      * from a given string. 
      */
     public static char randomChar(String str) {
-        Random random = new Random();							                    // Creates a random object
-        int index = random.nextInt(str.length());				              // Gets a random index from the string
-        return str.charAt(index);								                      // Get the current character from the random index.
+        Random random = new Random();							// Creates a random object
+        int index = random.nextInt(str.length());				// Gets a random index from the string
+        return str.charAt(index);								// Get the current character from the random index.
     }
 
 	
@@ -112,9 +115,8 @@ public class RabinKarpTest {
 
 		System.out.println("Starting test number " + testCount + ".\n");
 		
-		RabinKarpMethod method = new RabinKarpMethod();
 		prime = findPrime(prime);
-		method.search(pattern, text, prime);
+		RabinKarpMethod.search(pattern, text, prime);
 		
 		testCount++;
 		System.out.println("------------------------");
@@ -134,8 +136,7 @@ public class RabinKarpTest {
 		String text = "";
 		
 		String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		
-		RabinKarpMethod method = new RabinKarpMethod();
+	
 		prime = findPrime(prime);
 		
 		for (int i = 0; i < 1; i++){
@@ -146,7 +147,7 @@ public class RabinKarpTest {
 			text += String.valueOf(randomChar(letters));
 		}
 		
-		method.search(pattern, text, prime);
+		RabinKarpMethod.search(pattern, text, prime);
 		testCount++;
 		System.out.println("------------------------");
 		
@@ -167,7 +168,6 @@ public class RabinKarpTest {
 		
 		String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-		RabinKarpMethod method = new RabinKarpMethod();
 		prime = findPrime(prime);
 		
 		for (int i = 0; i < 2; i++){
@@ -178,7 +178,7 @@ public class RabinKarpTest {
 			text += String.valueOf(randomChar(letters));
 		}
 		
-		method.search(pattern, text, prime);
+		RabinKarpMethod.search(pattern, text, prime);
 		testCount++;
 		System.out.println("------------------------");
 		
@@ -199,7 +199,6 @@ public class RabinKarpTest {
 		
 		String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		
-		RabinKarpMethod method = new RabinKarpMethod();
 		prime = findPrime(prime);
 		
 		for (int i = 0; i < 1; i++){
@@ -210,7 +209,7 @@ public class RabinKarpTest {
 			text += String.valueOf(randomChar(letters));
 		}
 		
-		method.search(pattern, text, prime);
+		RabinKarpMethod.search(pattern, text, prime);
 		testCount++;
 		System.out.println("------------------------");
 		
@@ -243,10 +242,9 @@ public class RabinKarpTest {
 			System.out.print("Finally, provide an integer: ");
 			int prime = readUser.nextInt();
 			
-			RabinKarpMethod method = new RabinKarpMethod();
 			prime = findPrime(prime);
 			
-			method.search(pattern, text, prime);
+			RabinKarpMethod.search(pattern, text, prime);
 			System.out.print("Would you like to do another search? [Y/N]: ");
 			if (readUser.nextLine().equals("N")) {answer = false;}
 			continue;
