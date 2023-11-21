@@ -20,7 +20,7 @@ pattern is m, and the size of the text is n, where we can assume that n > m. The
 brute force method is simple and consistent but very slow. The best case runtime of this method is O(n)
 which only happens if the pattern is found at the very beginning of the text. The worst case is O(n^2)
 where the pattern doesn't appear in the text at all. This algorithm will perform a total of O((n-m+1)*m)
-operations. This code is implemented as the ... 
+operations. 
 
 EX:
 "If there is a lock of 4-digit PIN. 
