@@ -79,3 +79,29 @@ The second set of 10 test methods are testing for the pattern not found.
 The third set of 10 test methods are testing for if the string is shorter
 than the pattern. This way there is a thorough check for all the cases possible
 with different tests.
+
+Examples of JUnit tests:
+
+  // Test for pattern found 
+	@Test
+	void test5a() {
+		String input = "ABABA ADBBCB ABD DABA ABBADA";
+		String pattern = "DA";
+		assertEquals("Pattern found", algorithm.search(input, pattern));
+	}
+
+  // Test for pattern not found 
+	@Test
+	void test5b() {
+		String input = "ABABA ADBBCB ABD DABA ABBADA";
+		String pattern = "AAD";
+		assertEquals("Pattern not found", algorithm.search(input, pattern));
+	}
+
+  // Test for string length shorter than pattern searching for
+	@Test
+	void test3c() {
+		String input = "ab";
+		String pattern = "abbabba";
+		assertEquals("String length smaller than pattern", algorithm.search(input, pattern));
+	}
