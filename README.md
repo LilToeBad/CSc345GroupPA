@@ -41,6 +41,7 @@ pattern moves past the mismatched character. The average runtime complexity of t
 auxilary space is O(1). The Bad Character Heuristic may take O(n^2) time in the worst case scenario which occurs 
 when all characters of the text and pattern are the same. 
 EX: 
+
 text = "SSSSSSSSSS" pattern = "SSS"
 
 However, the BCH method may take O(m/n) time in the best case and this happens when all characters of the text 
@@ -49,7 +50,8 @@ method generates a table for good suffixes. This helps determine how much to shi
 and when a partial match has been found. The runtime of this method is O(n) because it iterates thrugh every 
 character of the text at least once.  
 
-RUNTIME: O(nm)
+RUNTIME: O(nm).
+
 Space Used: O(1).
 
 ## KMP Algorithm for Pattern Searching
@@ -71,17 +73,26 @@ I do not like them anywhere.
 I do not like green eggs and ham.
 I do not like them, Sam-I-Am." - Dr. Seuss' "Green Eggs and Ham"
 pattern = "like"
+
 output: 
+
 Pattern found at index 9.
+
 Pattern found at index 41.
+
 Pattern found at index 75.
+
 Pattern found at index 110.
+
 Pattern found at index 140.
+
 Pattern found at index 175.
+
 All done!
 
-RUNTIME: O(n+m)
-Space Used: O(1)
+RUNTIME: O(n+m).
+
+Space Used: O(1).
 
 ## Rabin-Karp Algorithm for Pattern Searching
 The Rabin-Karp Algorithm was implemented by Caleb M. The Rabin-Karp algorithm is given a text sequence as a String 
@@ -118,17 +129,27 @@ uses O(1) auxiliary space, all the work is done on the text sequence.
 
 EX:
 The pattern sequence of this test is: AB. And the text sequence is: AABAABABABBAABAABBBAABAABABBA.
-Pattern Found at index 1
-Pattern Found at index 4
-Pattern Found at index 6
-Pattern Found at index 8
-Pattern Found at index 12
-Pattern Found at index 15
-Pattern Found at index 20
-Pattern Found at index 23
-Pattern Found at index 25
+
+Pattern Found at index 1.
+
+Pattern Found at index 4.
+
+Pattern Found at index 6.
+
+Pattern Found at index 8.
+
+Pattern Found at index 12.
+
+Pattern Found at index 15.
+
+Pattern Found at index 20.
+
+Pattern Found at index 23.
+
+Pattern Found at index 25.
 
 Total number of patterns found were 9.
 
-RUNTIME: O(n+m)
-Space Used: O(1)
+RUNTIME: O(n+m).
+
+Space Used: O(1).
