@@ -64,6 +64,16 @@ Searching for string of "n" characters in string of "m" characters,
 it would take n* m amount of tries. 
 
 For my implementation: 
-- I created the BruteForce class that implements a search method that take the string as an input and the string pattern as the other input. If the pattern is found in the string, the method will return "Pattern found", if the pattern is not found in the string, the method will return "Pattern not found". Else, if the string is shorter than the pattern searching for, the method will return "String length smaller than pattern". 
+- I created the BruteForce class that implements a search method that take
+the string as an input and the string pattern as the other input. If the
+pattern is found in the string, the method will return "Pattern found",
+if the pattern is not found in the string, the method will return "Pattern not found".
+Else, if the string is shorter than the pattern searching for, the method
+will return "String length smaller than pattern".
 
-- The way this code and method is tested is through a JUnit test. The first 10 test methods are testing for pattern found. The second set of 10 test methods are testing for the pattern not found. The third set of 10 test methods are testing for if the string is shorter than the pattern. This way there is a thorough check for all the cases possible with different tests.
+- The way this code and method is tested is through a JUnit test.
+The first 10 test methods are testing for pattern found.
+The second set of 10 test methods are testing for the pattern not found.
+The third set of 10 test methods are testing for if the string is shorter
+than the pattern. This way there is a thorough check for all the cases possible
+with different tests.
