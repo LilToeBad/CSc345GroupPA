@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 //Rename the import PatternSearch.BruteForce; match your local package.
 //If you're in a package import [Package Name].PatternSearch.BruteForce;
 //If you're not in a package, just import PatternSearch.BruteForce;.
-import GroupPA.PatternSearch.BruteForce;
+import PatternSearch.BruteForce;
 
 class BruteForceTest {
 
