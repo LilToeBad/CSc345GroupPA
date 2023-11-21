@@ -23,7 +23,7 @@ Full example: string input: "AB BA ABBA BA AB"
     "ABBA" - A matches so continutes to B
      ^
 2 - "AB BA ABBA BA AB"
-    "ABBA" - B matches so continutes to next B
+    "ABBA" - B matches so continues to next B
       ^
 3 - "AB BA ABBA BA AB"
     "ABBA" - " " and B does not match, so continues search through beginning at A
