@@ -6,7 +6,9 @@ Time complexity is porportional to the input size.
 Simple and consistent but very slow. 
 Iterating through every possibility available to solve the problem. 
 
-"Brute force string matching compares a given pattern with all substrings of a given text. Those comparisons between substring and pattern proceed character by character unless a mismatch is found." - demonstrations.wolfram.com 
+"Brute force string matching compares a given pattern with all substrings
+of a given text. Those comparisons between substring and pattern proceed
+character by character unless a mismatch is found." - demonstrations.wolfram.com 
 
 EX:
 "If there is a lock of 4-digit PIN. 
