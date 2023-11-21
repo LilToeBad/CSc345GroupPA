@@ -1,4 +1,7 @@
-import GroupPA.PatternSearch.KMP;
+//Rename the import PatternSearch.KMP match your local package.
+//If you're in a package import [Package Name].PatternSearch.KMP;
+//If you're not in a package, just import PatternSearch.KMP;.
+import PatternSearch.KMP;
 
 public class KMPTest {
 	public static void main() {
