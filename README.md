@@ -14,7 +14,7 @@ automaticity.
 ## Naive Algorithm for Pattern Searching (Brute Force Method)
 The Naive Algorithm was implemented by Kristin P. The brute force method slides the pattern over the text 
 sequence one by one (character by character), if a match is found, then slide by 1 again to chck for the
-subsequent matches. The brute force algorthim solves a problem through exhuastion. Iterating throughe every
+subsequent matches. The brute force algorthim solves a problem through exhuastion. Iterating through every
 possibility to solve the problem. Time complexity is porportional to the input size, for the size of the 
 pattern is m, and the size of the text is n, where we can assume that n > m. The implementation of the
 brute force method is simple and consistent but very slow. The best case runtime of this method is O(n)
