@@ -1,7 +1,10 @@
 import java.util.Random;
 import java.util.random.*;
 
-import GroupPA.PatternSearch.RabinKarpMethod;
+//Rename the import PatternSearch.RabinKarpMethod; match your local package.
+//If you're in a package import [Package Name].PatternSearch.RabinKarpMethod;
+//If you're not in a package, just import PatternSearch.RabinKarpMethod;.
+import PatternSearch.RabinKarpMethod;
 
 import java.math.*;
 import java.util.Scanner;
