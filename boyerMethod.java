@@ -4,7 +4,8 @@ package teamProject;
 // CSC 345, Fall '23
 // boyerMethod.java for team project
 
-public class boyerMethod{
+
+public class boyerMethod {
 	
 	static int[] badCharacters = new int[256];
 
@@ -14,16 +15,17 @@ public class boyerMethod{
 		int numOfShifts = 0;
 		
 		while((string.length - pattern.length) >= numOfShifts) { // potential alignments
-			System.out.println("inside first wile loop");
+			// System.out.println("inside first wile loop");
 			
-			int matchingIndexNum = pattern.length -1;
+			int matchingIndexNum = pattern.length-1;
 			
 			while(matchingIndexNum >= 0 && pattern[matchingIndexNum] == string[numOfShifts+matchingIndexNum]) {
-				System.out.println("inside second while loop");
+				// System.out.println("inside second while loop");
 				matchingIndexNum--;
+			}
 				
-				if(matchingIndexNum < 0) { // pattern is present at current shift
-					System.out.println("Pattern occurs at index: " + numOfShifts);
+			if(matchingIndexNum < 0) { // pattern is present at current shift
+				System.out.println("Pattern occurs at index: " + numOfShifts);
 					
 					if(numOfShifts+pattern.length < string.length) {	// checks if the pattern occurs at the end of the text
 						int index = string[numOfShifts+pattern.length];
@@ -31,15 +33,18 @@ public class boyerMethod{
 					}else {
 						numOfShifts++;
 					}
-				}else {
+				}
+			else {
 					// shifts the pattern so that the bad character in the text so it'll align with the pattern
 					int index = string[numOfShifts+matchingIndexNum];
 					numOfShifts += ( 1 > (matchingIndexNum - badCharacters[index]))? 1: (matchingIndexNum - badCharacters[index]);
 				}
 			}
 		}
+	
+
 		
-	}
+	
 		  
 	public static void checkBadCharHeuristics(char[] pattern){
 	  /*
