@@ -1,4 +1,3 @@
-package GroupPA;
 /* Author: Caleb McKinley
  * Class: RabinKarpMethod
  * Purpose: This class implements the Rabin Karp algorithm
