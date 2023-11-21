@@ -1,6 +1,6 @@
 # README
 ## Pattern Searching Algorithms
-### Implemented by: Caleb M., Aria K., Sasha J., Kristin L.
+### Implemented by: Caleb M., Aria K., Sasha J., Kristin P.
 
 ## Pattern Searching Algorithms Overview
 Pattern Searching algorithms are algorithms that are handy for searching a string within another given string.
@@ -12,7 +12,7 @@ patterns, identify patterns even when partly hidden, or recognize patterns quick
 automaticity. 
 
 ## Naive Algorithm for Pattern Searching (Brute Force Method)
-The Naive Algorithm was implemented by Kristin L. The brute force method slides the pattern over the text 
+The Naive Algorithm was implemented by Kristin P. The brute force method slides the pattern over the text 
 sequence one by one (character by character), if a match is found, then slide by 1 again to chck for the
 subsequent matches. The brute force algorthim solves a problem through exhuastion. Iterating throughe every
 possibility to solve the problem. Time complexity is porportional to the input size, for the size of the 
