@@ -32,6 +32,89 @@ In the worst case, it will take 10,000 tries to find the right combination." - G
 RUNTIME: O(nm)
 Space Used: O(1).
 
+The code implemented is a Brute-Force class with a search method that takes two inputs.
+The first input being the string input, and the second being the string pattern.
+If the pattern is found in the string, the method will return "Pattern found# Kristin's Work
+
+Brute force algorthim solves a problem through exhuastion. 
+Iterating through every possibility to solve the problem. 
+Time complexity is porportional to the input size. 
+Simple and consistent but very slow. 
+Iterating through every possibility available to solve the problem. 
+
+"Brute force string matching compares a given pattern with all substrings
+of a given text. Those comparisons between substring and pattern proceed
+character by character unless a mismatch is found." - demonstrations.wolfram.com 
+
+EX:
+"If there is a lock of 4-digit PIN. 
+The digits to be chosen from 0-9 then the brute force
+will be trying all possible combinations one by one like
+0001, 0002, 0003, 0004, and so on until we get the right PIN.
+In the worst case, it will take 10,000 tries to find the right combination." - GeeksforGeeks
+
+Full example: string input: "AB BA ABBA BA AB"
+                 string pattern: "ABBA"
+1 - "AB BA ABBA BA AB"
+    "ABBA" - A matches so continutes to B
+     ^
+2 - "AB BA ABBA BA AB"
+    "ABBA" - B matches so continues to next B
+      ^
+3 - "AB BA ABBA BA AB"
+    "ABBA" - " " and B does not match, so continues search through beginning at A
+       ^
+4 - "AB BA ABBA BA AB"
+     "ABBA" - B does not match A, continue search with A
+      ^
+5 - "AB BA ABBA BA AB"
+      "ABBA" - " " does not match A, continue search with A
+       ^
+6 - "AB BA ABBA BA AB"
+       "ABBA" - B does not match A, continue search with A
+        ^
+7 - "AB BA ABBA BA AB"
+        "ABBA" - A matches so continutes to B
+         ^
+8 - "AB BA ABBA BA AB"
+        "ABBA" - " " does not match B, so continues search through beginning at A
+          ^
+9 - "AB BA ABBA BA AB"
+         "ABBA" - " " does not match A, continue search with A
+          ^
+10 - "AB BA ABBA BA AB"
+           "ABBA" - A matches so continutes to B
+            ^
+11 - "AB BA ABBA BA AB"
+           "ABBA" - B matches so continutes to next B
+             ^
+12 - "AB BA ABBA BA AB"
+           "ABBA" - B matches so continutes to A
+              ^
+13 - "AB BA ABBA BA AB"
+           "ABBA" - A matches so and equals length of pattern - so done searching
+               ^
+Pattern found!
+
+
+RUNTIME: O(mn).
+Searching for string of "n" characters in string of "m" characters, 
+it would take n* m amount of tries. 
+
+Implementation of code and tests:
+  The BruteForce class implements a search method that take
+the string as an input and the string pattern as the other input. If the
+pattern is found in the string, the method will return "Pattern found",
+if the pattern is not found in the string, the method will return "Pattern not found".
+Else, if the string is shorter than the pattern searching for, the method
+will return "String length smaller than pattern".
+  The way this code and method is tested is through JUnit testing.
+The first 10 test methods are testing for pattern found.
+The second set of 10 test methods are testing for the pattern not found.
+The third set of 10 test methods are testing for if the string is shorter
+than the pattern. This way there is a thorough check for all the cases possible
+with different tests.
+
 ## Boyer-Moore Algorithm for Pattern Searching
 The Boyer-Moore Algorithm was implemented by Sasha J. The algorithm is a combination, but can be independent, 
 of Bad Character Heuristic and Good Suffix Heuristic approaches. Using these two methods, the algorithm skips 
