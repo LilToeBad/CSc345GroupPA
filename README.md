@@ -169,3 +169,15 @@ Total number of patterns found were 9.
 RUNTIME: O(n+m).
 
 Space Used: O(1).
+
+## How to run these the code
+Here you will find a class called PatternSearch.java. Within that class the main method takes in input from the user and 
+prompts them to choose the according test case of their choosing. The main class will go to the according test cases for 
+the provided algorithm. For example, when prompted, if the user chooses 1, it will perform all the JUnit test for the Brute
+Force method. The while loop in the main method will continue to run the test until the user decided to jump out of the 
+while loop. **IMPORTANT**: The PatternSearch.java is local by the package, if you wish to execute the test cases and see
+the output, make sure to put the classes: PatternSearch.java, BruteForceTest.java, testCasesBoyer, KMPTest.java, and
+RabinKarpTest.java in the same directory. **IMPORTANT2**: In order to have the code fully execute, make sure the classes 
+that have the test cases (i.e BruteForceTest.java) is in the same package that has the directory of the PatternSearch.java.
+If you're not working in a package that has the directory of the PatterSearch.java file (default package), you do not need
+to make the test cases local to a specific package (leave it default).
