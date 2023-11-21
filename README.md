@@ -181,3 +181,11 @@ RabinKarpTest.java in the same directory. **IMPORTANT2**: In order to have the c
 that have the test cases (i.e BruteForceTest.java) is in the same package that has the directory of the PatternSearch.java.
 If you're not working in a package that has the directory of the PatterSearch.java file (default package), you do not need
 to make the test cases local to a specific package (leave it default).
+
+## Extra Files and Misc.
+Other files that can be found in this folder is the seperate classes of each algorithm we implemented, used for resources 
+as our own, and can be implemented and used locally. These can be found as the .java file, for example, KMP.java.
+The .txt files is all the working research each group member did on the project, for example Caleb.txt is all the provided 
+research for the RabinKarpMethod. The .pdf file is the recorded work that each group member did on the project, this file
+can be found as the RecordedWork.pdf. Lastly, the presentation for the research and the implemented work for the pattern
+searching algorithms 
