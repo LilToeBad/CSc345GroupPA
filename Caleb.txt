@@ -36,3 +36,128 @@ Plan of implementation:
 -> Develop a rolling hash function to determine the hash value
 -> Develop a search method that prints the starting index of where the exact pattern is found (if found).
 -? Develop test cases
+
+
+Test Case Outputs:
+------------------------
+Starting test number 1.
+
+The pattern sequence of this test is: null. And the text sequence is: This test cass will only print this.
+------------------------
+Starting test number 2.
+
+The pattern sequence of this test is: Pattern. And the text sequence is: null.
+------------------------
+Starting test number 3.
+
+The pattern sequence of this test is: Hello World. And the text sequence is: Goodbye World.
+
+Total number of patterns found were 0.
+------------------------
+Starting test number 4.
+
+The pattern sequence of this test is: Refill. And the text sequence is: Filler.
+
+Total number of patterns found were 0.
+------------------------
+Starting test number 5.
+
+The pattern sequence of this test is: AB. And the text sequence is: AABAABABABBAABAABBBAABAABABBA.
+Pattern Found at index 1
+Pattern Found at index 4
+Pattern Found at index 6
+Pattern Found at index 8
+Pattern Found at index 12
+Pattern Found at index 15
+Pattern Found at index 20
+Pattern Found at index 23
+Pattern Found at index 25
+
+Total number of patterns found were 9.
+------------------------
+Starting test number 6.
+
+The pattern sequence of this test is: Wake up, it's time for school. And the text sequence is: Wake up, it's time for school.
+
+Total number of patterns found were 0.
+------------------------
+Starting test number 7.
+
+The pattern sequence of this test is: bee. And the text sequence is: I saw a bee on a flower petal this morning.
+Pattern Found at index 8
+
+Total number of patterns found were 1.
+------------------------
+Starting test number 8.
+
+The pattern sequence of this test is: Pattern is longer than text sequence. And the text sequence is: Text sequence is shorter.
+------------------------
+Starting test number 9.
+
+The pattern sequence of this test is: P. And the text sequence is: ARAQUMQVLZSQJJFQUXFIRRBRKHENIFSOXDNRZEUPZIQTSMQROI.
+Pattern Found at index 39
+
+Total number of patterns found were 1.
+------------------------
+Starting test number 10.
+
+The pattern sequence of this test is: B. And the text sequence is: OHBIRNMGDIPTEZUSIIXRWZVVCSMDBIPNVWACBVXONCABSBGDVO.
+Pattern Found at index 2
+Pattern Found at index 28
+Pattern Found at index 36
+Pattern Found at index 43
+Pattern Found at index 45
+
+Total number of patterns found were 5.
+------------------------
+Starting test number 11.
+
+The pattern sequence of this test is: CC. And the text sequence is: VKTMIBBOJJFMNEXEQHXFAKUWASEFYFIUTLYKXOZJAAONFLOKOM.
+
+Total number of patterns found were 0.
+------------------------
+Starting test number 12.
+
+The pattern sequence of this test is: NI. And the text sequence is: LUWRVCAZTFXUAOCXKCWSMUJZTAYPDVMWPRVDEHTVLZKONMJHFD.
+
+Total number of patterns found were 0.
+------------------------
+Starting test number 13.
+
+The pattern sequence of this test is: B. And the text sequence is: CDKVETPNUHXNLRCOTXYJOWUFEKAYZCGIIHQLALXFNIXFEHWUGQSWPYTINOBGBBEFFFRDIVCUUWYVTJLXYVNGLMBUDSKLSTYUKETS.
+Pattern Found at index 58
+Pattern Found at index 60
+Pattern Found at index 61
+Pattern Found at index 86
+
+Total number of patterns found were 4.
+------------------------
+Starting test number 14.
+
+The pattern sequence of this test is:  . And the text sequence is: J u s t a w h o l e b u n c h o f s p a c e s .
+Pattern Found at index 1
+Pattern Found at index 3
+Pattern Found at index 5
+Pattern Found at index 7
+Pattern Found at index 9
+Pattern Found at index 11
+Pattern Found at index 13
+Pattern Found at index 15
+Pattern Found at index 17
+Pattern Found at index 19
+Pattern Found at index 21
+Pattern Found at index 23
+Pattern Found at index 25
+Pattern Found at index 27
+Pattern Found at index 29
+Pattern Found at index 31
+Pattern Found at index 33
+Pattern Found at index 35
+Pattern Found at index 37
+Pattern Found at index 39
+Pattern Found at index 41
+Pattern Found at index 43
+
+Total number of patterns found were 22.
+------------------------
+
