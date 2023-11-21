@@ -14,13 +14,11 @@ public class boyerMethod {
 		
 		int numOfShifts = 0;
 		
-		while((string.length - pattern.length) >= numOfShifts) { // potential alignments
-			// System.out.println("inside first wile loop");
+		while((string.length - pattern.length) >= numOfShifts) { // potential alignment
 			
 			int matchingIndexNum = pattern.length-1;
 			
 			while(matchingIndexNum >= 0 && pattern[matchingIndexNum] == string[numOfShifts+matchingIndexNum]) {
-				// System.out.println("inside second while loop");
 				matchingIndexNum--;
 			}
 				
