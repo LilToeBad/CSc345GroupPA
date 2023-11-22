@@ -170,7 +170,7 @@ RUNTIME: O(n+m).
 
 Space Used: O(1).
 
-## How to run these the code
+## How to run the code and test
 Here you will find a class called PatternSearch.java. Within that class the main method takes in input from the user and 
 prompts them to choose the according test case of their choosing. The main class will go to the according test cases for 
 the provided algorithm. For example, when prompted, if the user chooses 1, it will perform all the JUnit test for the Brute
