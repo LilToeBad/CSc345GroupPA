@@ -188,4 +188,5 @@ as our own, and can be implemented and used locally. These can be found as the .
 The .txt files is all the working research each group member did on the project, for example Caleb.txt is all the provided 
 research for the RabinKarpMethod. The .pdf file is the recorded work that each group member did on the project, this file
 can be found as the RecordedWork.pdf. Lastly, the presentation for the research and the implemented work for the pattern
-searching algorithms. There were no challenges faced during this project.
+searching algorithms. Here's the link to the presentation: https://docs.google.com/presentation/d/1Gved9R2Nc61rDPZ6otjQQbCOmQ3mb-ywyZEYiXIFLMM/edit?usp=sharing
+There were no challenges faced during this project.
