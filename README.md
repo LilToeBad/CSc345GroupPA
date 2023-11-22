@@ -49,21 +49,32 @@ than the pattern. This way there is a thorough check for all the cases possible
 with different tests.
 
 ## Boyer-Moore Algorithm for Pattern Searching
-The Boyer-Moore Algorithm was implemented by Sasha J. The algorithm is a combination, but can be independent, 
-of Bad Character Heuristic and Good Suffix Heuristic approaches. Using these two methods, the algorithm skips 
-as many characters as it can. In the Bad Character Heuristic, if the current character doesn't match the current 
+The Boyer-Moore Algorithm was implemented by Sasha J. The algorithm is a combination, but can be independent,
+of Bad Character Heuristic and Good Suffix Heuristic approaches. Using these two methods, the algorithm skips
+as many characters as it can. In the Bad Character Heuristic, if the current character doesn't match the current
 character of the pattern, then the characters of the pattern will be shifted until there is a match or until the
-pattern moves past the mismatched character. The average runtime complexity of the algorithm is O(nm) and its 
-auxilary space is O(1). The Bad Character Heuristic may take O(n^2) time in the worst case scenario which occurs 
-when all characters of the text and pattern are the same. 
-EX: 
+pattern moves past the mismatched character. On the other hand, the GOod Suffix Heuristic requires a preprocessing
+table. In this heuristic, the pattern is shifted until another occurrence of a substring of the text in the pattern
+matches with a substring in the text. It is also shifted when a prefix of the pattern matches with the suffix of the
+substring of the text. Finally, the pattern shifts when the pattern moves past the substring of the given text. The
+average runtime complexity of the algorithm is O(nm), where m is the pattern length and n is the give text length
+and its auxilary space is O(1). The Bad Character Heuristic may take O(n^2) time in the worst case scenario which occurs
+when all characters of the text and pattern are the same.
+EX:
 
-text = "SSSSSSSSSS" pattern = "SSS"
+text = "sea shells have ssss" pattern = "SSS"
 
-However, the BCH method may take O(m/n) time in the best case and this happens when all characters of the text 
+The algorithm will compare the pattern and text at every "s" occurrence and compare from right to left.
+Using the preprocessed table to find each "s" occurrence, the algorithm will skip parts of the text that aren't
+"s" strings. Giving the output:
+
+pattern found at index: 16
+pattern found at index: 17
+
+However, the BCH method may take O(m/n) time in the best case and this happens when all characters of the text
 and pattern are different. On the other hand, just like the Bad Character Heuristic, the Good Suffix Heuristic
-method generates a table for good suffixes. This helps determine how much to shift a pattern when a mismatch occurs 
-and when a partial match has been found. The runtime of this method is O(n) because it iterates thrugh every 
+method generates a table for good suffixes. This helps determine how much to shift a pattern when a mismatch occurs
+and when a partial match has been found. The runtime of this method is O(n) because it iterates through every
 character of the text at least once.  
 
 RUNTIME: O(nm).
